@@ -1,0 +1,75 @@
+@import "../../../assets/front/styles/variable";
+@import "../../../assets/front/styles/mixin";
+
+.activities {
+    background: $light-green;
+    padding: 2.5rem 0.3rem;
+}
+.activitiesBox {
+    background: $bg-white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.25);
+    overflow: hidden;
+    transition: all ease-in-out 0.4s;
+    .activitiesBoxImg {
+        flex: 0 0 45%;
+        max-width: 45%;
+        overflow: hidden;
+        img {
+            transition: all ease-in-out 0.4s;
+        }
+    }
+    .activitiesBoxCont {
+        flex: 1 0 0%;
+        padding-left: 0.875rem;
+        h4 {
+            color: $bg-3;
+            font-size: 1.5rem;
+        }
+        p {
+            color: $bg-4;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            &:not(:last-child) {
+                margin-bottom: 0.7rem;
+            }
+        }
+    }
+    &:hover {
+        transform: translateY(-2%);
+        .activitiesBoxImg {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .activitiesBox {
+        .activitiesBoxCont {
+            h4 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 0.813rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 884px) {
+    .activitiesBox {
+        .activitiesBoxCont {
+            h4 {
+                margin-bottom: 0.313rem;
+            }
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 0.313rem;
+                }
+            }
+        }
+    }
+}

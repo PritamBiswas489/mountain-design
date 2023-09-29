@@ -1,0 +1,106 @@
+@import "../../../assets/front/styles/variable";
+@import "../../../assets/front/styles/mixin";
+.overviewNavArea {
+    background: $bg-white;
+    margin: 1.125rem 0;
+    border-radius: 5px;
+}
+.overviewNav {
+    ul {
+        li {
+            a {
+                padding: 1.75rem 1.875rem;
+                display: block;
+                color: $bg-3;
+                font-size: 1.25rem;
+                font-weight: 700;
+                span {
+                    display: inline-block;
+                    margin-right: 0.313rem;
+                    img {
+                        width: 1.5rem;
+                        height: auto;
+                    }
+                }
+
+                &:hover {
+                    color: $bg-1;
+                }
+            }
+        }
+    }
+}
+.overviewRight {
+    padding-right: 1.25rem;
+    ul {
+        li {
+            &:not(:last-child) {
+                margin-right: 1.25rem;
+            }
+            a {
+                display: block;
+                font-size: 1.125rem;
+                font-weight: 500;
+                border-radius: 50px;
+                padding: 0.625rem 1.25rem;
+                &.bookNow {
+                    background: $bg-1;
+                    color: $bg-white;
+                    &:hover {
+                        background: $bg-8;
+                    }
+                }
+                &.quickInquiry {
+                    background: $bg-3;
+                    color: $bg-white;
+                    &:hover {
+                        background: $bg-2;
+                    }
+                }
+                span {
+                    img {
+                        width: 2.25rem;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+.overviewBox {
+    background: $bg-white;
+    margin-top: 1.125rem;
+    .boxHeader {
+        padding: 0.875rem;
+        border-bottom: #e4e4e4 1px solid;
+        h4 {
+            margin: 0;
+            font-size: 1.5rem;
+            span {
+                display: inline-block;
+                margin-right: 1.25rem;
+                img {
+                    width: 3.375rem;
+                    height: auto;
+                    display: inline-block;
+                }
+            }
+        }
+        a {
+            display: block;
+            @include darkBtn;
+            padding: 0.875rem 1.375rem;
+            font-weight: 500;
+            svg {
+                display: inline-block;
+                margin-left: 0.313rem;
+                position: relative;
+                margin-top: -0.188rem;
+                font-size: 1.375rem;
+            }
+        }
+    }
+    .overviewBoxInner {
+        padding: 1.25rem;
+    }
+}

@@ -1,0 +1,60 @@
+@import "../../../../assets/front/styles/variable";
+
+.greenRedHeighth {
+    .greenHeight {
+        margin: 1.25rem;
+        h5 {
+            color: $bg-10;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        li {
+            &:before {
+                background: url(../../../../assets/front/images/svg/grn-bullet.svg);
+            }
+
+            span {
+                color: $bg-10;
+            }
+        }
+    }
+    .redHeight {
+        h5 {
+            color: $red;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        li {
+            &:before {
+                background: url(../../../../assets/front/images/svg/red-bullet.svg);
+            }
+
+            span {
+                color: $red;
+            }
+        }
+    }
+
+    li {
+        padding-left: 1.875rem;
+        position: relative;
+        &:before {
+            content: "";
+
+            height: 0.875rem;
+            width: 0.875rem;
+            position: absolute;
+            top: 0.438rem;
+            left: 0;
+            background-size: contain !important;
+        }
+        &:not(:last-child) {
+            margin-bottom: 0.625rem;
+        }
+        span {
+            display: block;
+            font-weight: 600;
+            margin-top: 0.313rem;
+        }
+    }
+}

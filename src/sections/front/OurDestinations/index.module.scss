@@ -1,0 +1,114 @@
+@import "../../../assets/front/styles/variable";
+@import "../../../assets/front/styles/mixin";
+.ourDestinations {
+    background: $bg-white;
+    padding: 2.5rem 0.3rem;
+}
+
+.destinationsInner {
+    display: block;
+    position: relative;
+    text-align: center;
+    border-radius: 5;
+    overflow: hidden;
+    z-index: 1;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.2);
+        height: 100%;
+        width: 100%;
+        transition: all ease-in-out 0.4s;
+    }
+
+    img {
+        display: block;
+        transition: all ease-in-out 0.7s;
+    }
+    .destinationsContent {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-10%);
+        width: 100%;
+        height: auto;
+        padding: 0 1.125rem;
+        color: $bg-white;
+        transition: all ease-in-out 0.4s;
+        z-index: 1;
+        span {
+            display: inline-block;
+        }
+        h3 {
+            color: $bg-white;
+            // font-size: 2.25rem;
+            font-weight: 700;
+            transition: all ease-in-out 0.4s;
+        }
+        p {
+            opacity: 0;
+            visibility: hidden;
+            font-weight: 400;
+            transition: all ease-in-out 0.4s;
+        }
+    }
+    &:hover {
+        &:after {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .destinationsContent {
+            // bottom: 50%;
+            transform: translateY(-50%);
+            h3 {
+                margin-bottom: 1rem;
+            }
+            p {
+                opacity: 1;
+                visibility: visible;
+                margin-bottom: 1rem;
+            }
+        }
+        img {
+            transform: scale(1.06);
+        }
+    }
+}
+.destinationsInnerWgite {
+    height: 100%;
+    h4 {
+        color: $bg-3;
+        font-size: 1.625rem;
+        margin-bottom: 1.5rem;
+        span {
+            display: block;
+            color: $bg-1;
+            text-transform: uppercase;
+        }
+    }
+    p {
+        color: $bg-4;
+        font-size: 1.125rem;
+        font-weight: 400;
+        margin-bottom: 1.8rem;
+    }
+    a {
+        @include darkBtn;
+        svg {
+            margin-left: 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .destinationsInner {
+        .destinationsContent {
+            transform: translateY(-35%);
+        }
+        &:hover {
+            .destinationsContent {
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

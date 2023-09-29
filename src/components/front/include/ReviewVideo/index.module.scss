@@ -1,0 +1,79 @@
+@import "../../../../assets/front/styles/variable";
+.videoImg {
+    padding: 0 0.625rem;
+    position: relative;
+    .playBtn {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            opacity: 0.8;
+        }
+        img {
+            width: 5rem;
+            display: block;
+        }
+    }
+    .quoteStar {
+        position: absolute;
+        bottom: 3.125rem;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        p {
+            border-radius: 5px;
+            background: #f6f9fc;
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+            padding: 6px 10px;
+            display: inline-block;
+            font-weight: 500;
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+    .star {
+        margin-top: 10px;
+        ul {
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 6px 10px;
+            li {
+                &:not(:last-child) {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .videoImg {
+        .quoteStar {
+            bottom: 2.125rem;
+            p {
+                span {
+                    img {
+                        width: 1.125rem;
+                        height: 1.125rem;
+                    }
+                }
+            }
+        }
+        .star {
+            ul {
+                li {
+                    img {
+                        width: 1.125rem;
+                        height: 1.125rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@import "../../../assets/front/styles/variable";
+.itineraryAlertBox {
+    background: $bg-11;
+    padding: 0.938rem;
+    border-radius: 5px;
+    border: $bg-blue 1px solid;
+    position: relative;
+    .itineraryAlertLeft {
+        flex: 0 0 5.75rem;
+        max-width: 5.75rem;
+        span {
+            display: block;
+            text-align: center;
+            img {
+                display: inline-block;
+                width: 5.125rem;
+                height: auto;
+            }
+        }
+    }
+    .itineraryAlertRight {
+        flex: 1 0 0%;
+        max-width: 100%;
+        padding-left: 2.5rem;
+        position: relative;
+        p {
+            color: $bg-4;
+            font-weight: 400;
+            span {
+                font-weight: 700;
+            }
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 4.75rem;
+            height: 4.75rem;
+            background: url(../../../assets/front/images/alert-bg.png) 0 0 no-repeat;
+            opacity: 0.4;
+        }
+    }
+    .closeBtn {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+
+        color: $bg-3;
+        svg {
+            font-size: 2rem;
+        }
+        &:hover {
+            color: $bg-1;
+        }
+    }
+}

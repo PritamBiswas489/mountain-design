@@ -1,0 +1,229 @@
+@import "../styles/variable";
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline-style: none !important;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/* body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+      )
+      rgb(var(--background-start-rgb));
+  } */
+body {
+    color: #666;
+    background: #e4e4e4;
+    padding: 0 22px;
+    font-family: "Poppins";
+    font-weight: normal;
+    font-size: 1.125rem;
+    color: #425466;
+}
+
+a,
+button {
+    color: inherit;
+    text-decoration: none;
+    transition: all ease-in-out 0.4s;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $bg-3;
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+}
+h1 {
+    font-size: 5rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 2.25rem;
+}
+h4 {
+    font-size: 1.625rem;
+}
+h5 {
+    font-size: 1.125rem;
+}
+h1 {
+    font-size: 1rem;
+}
+ul,
+p {
+    padding: 0;
+    margin: 0;
+}
+.awardsAreaSlider {
+    .slick-slider {
+        margin: 0 -0.625rem !important;
+    }
+}
+.awardsAreaSlider .owl-prev,
+.awardsAreaSlider .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: unset;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    background: $bg-1 !important;
+    color: $bg-white !important;
+    border: $bg-white 3px solid;
+    transition: all ease-in-out 0.4s;
+}
+
+.awardsAreaSlider .owl-prev:hover,
+.awardsAreaSlider .owl-next:hover {
+    background: $bg-3 !important;
+    color: $bg-white !important;
+    border-color: $bg-white;
+}
+
+.awardsAreaSlider .owl-prev {
+    left: 0;
+}
+.awardsAreaSlider .owl-next {
+    right: 0;
+}
+
+.awardsAreaSlider .owl-prev span,
+.awardsAreaSlider .owl-next span {
+    font-size: 2.5rem;
+    display: block;
+    width: 3.375rem;
+    height: 3.375rem;
+    line-height: 3rem;
+    border-radius: 50%;
+}
+
+.revImgSlider {
+    .owl-prev,
+    .owl-next {
+        margin-top: 1.75rem !important;
+        font-size: unset;
+        border-radius: 50% !important;
+        padding: 0 !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        color: $bg-white !important;
+        border: $bg-white 3px solid;
+        transition: all ease-in-out 0.4s;
+        &:hover {
+            background: $bg-3 !important;
+            color: $bg-white !important;
+            border-color: $bg-white;
+        }
+        span {
+            font-size: 2.5rem;
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            line-height: 2.625rem;
+            border-radius: 50%;
+        }
+    }
+    .owl-prev {
+        margin-right: 1.25rem !important;
+    }
+    .owl-next {
+        margin-left: 1.25rem !important;
+    }
+}
+
+.mainBtn {
+    text-align: center;
+    border-radius: 5px;
+    background: $bg-1;
+    padding: 0.625rem 1.625rem;
+    color: $bg-white;
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* $. Classes
+\*----------------------------------------------------------------*/
+.stripeSlider .slick-slide {
+    transition: all ease-in-out 0.5s;
+    transform: scale(0.8);
+}
+.stripeSlider .full-active {
+    transform: scale(1);
+}
+.stripeSlider .semi-active {
+    transform: scale(0.9);
+}
+
+.revImgSlider {
+    margin-bottom: 5.375rem;
+    .slick-slider {
+        margin: 0 -0.625rem !important;
+        .slick-prev,
+        .slick-next {
+            bottom: -4rem;
+            top: auto;
+            width: 3rem;
+            height: 3rem;
+            padding: 0;
+            transform: translate(0, 0);
+
+            margin-top: 1.75rem !important;
+            border-radius: 50% !important;
+            padding: 0 !important;
+            background: rgba(255, 255, 255, 0.1) !important;
+            color: $bg-white !important;
+            border: $bg-white 3px solid;
+            transition: all ease-in-out 0.4s;
+            &:hover {
+                background: $bg-3 !important;
+                color: $bg-white !important;
+                border-color: $bg-white;
+            }
+            &:before {
+                font-size: 1.2rem;
+                opacity: 1;
+            }
+        }
+        .slick-prev {
+            left: calc(50% - 3.5rem);
+            &:before {
+                content: "\f053";
+                font-family: "Font Awesome 5 free";
+                font-weight: 900;
+            }
+        }
+        .slick-next {
+            right: calc(50% - 3.5rem);
+            &:before {
+                content: "\f054";
+                font-family: "Font Awesome 5 free";
+                font-weight: 900;
+            }
+        }
+    }
+}

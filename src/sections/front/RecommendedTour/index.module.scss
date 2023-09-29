@@ -1,0 +1,342 @@
+@import "../../../assets/front/styles/variable";
+@import "../../../assets/front/styles/mixin";
+.recommendedTour {
+    background: $bg-white;
+    padding: 2.5rem 0.3rem;
+}
+
+.recommendedTourTitle {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2.25rem;
+    h4 {
+        span {
+            color: #ff7900;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+    p {
+        max-width: 1270px;
+    }
+}
+.recommendedBg {
+    position: absolute;
+    z-index: -1;
+    top: -10px;
+    left: 0;
+    h2 {
+        line-height: 1;
+        font-size: 10rem;
+        font-weight: 800;
+        -webkit-text-stroke: 2px rgba(10, 37, 64, 0.1);
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+        span {
+            display: inline-block;
+            img {
+                display: block;
+                width: 7.5rem;
+                height: 7.5rem;
+            }
+        }
+    }
+}
+
+.recommendedBoxTop {
+    position: relative;
+    overflow: hidden;
+    img {
+        display: block;
+        transition: all ease-in-out 0.4s;
+    }
+    .listedOff {
+        position: absolute;
+        top: 1.25rem;
+        left: 1.25rem;
+        z-index: 1;
+        ul {
+            li {
+                background: $bg-3;
+                color: $bg-white;
+                padding: 6px 10px;
+                font-size: 0.875rem;
+                border-radius: 5px;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    .batch {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        z-index: 1;
+    }
+    .bookQuote {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -5%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all ease-in-out 0.4s;
+        z-index: 1;
+        li {
+            &:not(:last-child) {
+                margin-right: 1.125rem;
+            }
+            a {
+                svg {
+                    margin-left: 10px;
+                }
+                &.bookNowBtn {
+                    @include orangeBtn;
+                    white-space: nowrap;
+                }
+                &.getQuoteBtn {
+                    @include whiteBtn;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        transition: all ease-in-out 0.4s;
+    }
+}
+.recommendedBoxBottom {
+    box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.25);
+}
+.recommendedBoxBottomTop {
+    padding: 1rem 0.8rem;
+    h5 {
+        font-size: 1.375rem;
+        margin-bottom: 0.1rem;
+        span {
+            color: rgba(10, 37, 64, 0.5);
+            font-size: 1rem;
+            position: relative;
+            padding-left: 28px;
+            margin-left: 8px;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 18px;
+                height: 3px;
+                background: rgba(10, 37, 64, 0.3);
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+.recommendedBox {
+    &:hover {
+        .bookQuote {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            visibility: visible;
+        }
+        .recommendedBoxTop {
+            &:after {
+                background: rgba(0, 0, 0, 0.5);
+            }
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.placeTime {
+    .placeTimeBox {
+        .placeTimeIcon {
+            flex: 0 0 3rem;
+        }
+        .placeTimeCont {
+            flex-grow: 1;
+            padding-left: 0.625rem;
+            h5 {
+                color: $bg-3;
+                font-size: 1.125rem;
+                margin: 0;
+            }
+            h6 {
+                color: $bg-1;
+                font-size: 1.125rem;
+                margin: 0;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.exploreArea {
+    background: $light-green;
+    padding: 1rem 0.8rem;
+    ul {
+        li {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            span {
+                color: $bg-1;
+                font-size: 1.875rem;
+                font-weight: 700;
+            }
+            del {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            small {
+                color: rgba(10, 37, 64, 0.5);
+                font-size: 1rem;
+                font-weight: 700;
+                text-transform: capitalize;
+            }
+            a {
+                @include orangeBtn;
+                font-size: 1.125rem;
+                padding: 0.625rem 1.125rem;
+                text-transform: capitalize;
+                font-weight: 400;
+            }
+        }
+    }
+}
+.reviewRateing {
+    margin-bottom: 1.325rem;
+    p {
+        color: $bg-3;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-left: 0.625rem;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .placeTime {
+        .placeTimeBox {
+            .placeTimeIcon {
+                flex: 0 0 1.875rem;
+                max-width: 1.875rem;
+                img {
+                    width: 1.875rem;
+                    height: 1.875rem;
+                }
+            }
+        }
+    }
+    .reviewRateing {
+        img {
+            width: 1rem;
+        }
+    }
+
+    .recommendedTourTitle {
+        margin-bottom: 3.25rem;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .recommendedBg {
+        h2 {
+            font-size: 8rem;
+            span {
+                img {
+                    height: 5.5rem;
+                    width: 5.5rem;
+                }
+            }
+        }
+    }
+    .recommendedTourTitle {
+        margin-bottom: 2.25rem;
+    }
+}
+@media only screen and (max-width: 1135px) {
+    .placeTime {
+        .placeTimeBox {
+            .placeTimeCont {
+                h5 {
+                    font-size: 1rem;
+                }
+                h6 {
+                    font-size: 0.813rem;
+                }
+            }
+        }
+    }
+    .recommendedBoxBottomTop {
+        h5 {
+            font-size: 1.125rem;
+            margin-bottom: 0.1rem;
+        }
+        p {
+            font-size: 0.813rem;
+        }
+    }
+
+    .exploreArea {
+        padding: 0.5rem 0.8rem;
+        ul {
+            li {
+                font-size: 1rem;
+                span {
+                    font-size: 1.2rem;
+                }
+                del {
+                    font-size: 0.75rem;
+                }
+                small {
+                    font-size: 0.75rem;
+                }
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 884px) {
+    .recommendedBg {
+        h2 {
+            font-size: 5rem;
+            span {
+                img {
+                    height: 3.5rem;
+                    width: 3.5rem;
+                }
+            }
+        }
+    }
+    .recommendedTourTitle {
+        margin-bottom: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .recommendedBg {
+        h2 {
+            font-size: 3.5rem;
+            span {
+                img {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                }
+            }
+        }
+    }
+}

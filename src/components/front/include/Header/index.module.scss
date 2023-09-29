@@ -1,0 +1,266 @@
+@import "../../../../assets/front/styles/variable";
+.mainHeader {
+    // padding: 2rem 0;
+    background: $bg-white;
+    .logo {
+        width: 15.625rem;
+        a {
+            display: block;
+        }
+    }
+    .headerRightTop {
+        background: $bg-2;
+    }
+}
+.hdrTopRight {
+    ul {
+        li {
+            &:not(:last-child) {
+                margin-right: 1px;
+            }
+            a {
+                display: inline-block;
+                background: $bg-3;
+                height: 3.75rem;
+                width: 3.75rem;
+                text-align: center;
+                line-height: 3.75rem;
+            }
+            .usd {
+                height: 3.75rem;
+                background: $bg-3;
+                color: $bg-white;
+                padding: 0 0.625rem;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.hdrTopLeft {
+    ul {
+        padding: 0 1.25rem;
+        li {
+            position: relative;
+            &:not(:last-child) {
+                margin-right: 4rem;
+                &:after {
+                    content: "";
+                    width: 1px;
+                    height: 70%;
+                    background: $bg-white;
+                    right: -2rem;
+                    top: 50%;
+                    position: absolute;
+                    transform: translateY(-50%);
+                }
+            }
+            a {
+                display: block;
+                color: $bg-white;
+                svg {
+                    font-size: 1.6rem;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+.headerRightBottom {
+    padding: 1.03rem 1.25rem;
+}
+.navigation {
+    ul {
+        li {
+            &:not(:last-child) {
+                margin-right: 1.875rem;
+            }
+            a {
+                color: $bg-3;
+                font-size: 1.125rem;
+                font-weight: 700;
+                display: block;
+                svg.homeIcon {
+                    position: relative;
+                    top: -2px;
+                    font-size: 1.5rem;
+                    margin-right: 0.625rem;
+                }
+                &:hover {
+                    color: $bg-1;
+                }
+            }
+        }
+    }
+}
+.payHamburger {
+    ul {
+        li {
+            &:not(:last-child) {
+                margin-right: 0.625rem;
+            }
+            a {
+                display: block;
+                &.payDeposit {
+                    background-color: $bg-3;
+                    color: $bg-white;
+                    padding: 1rem 2.625rem;
+                    border-radius: 30px;
+                    font-weight: 700;
+                    &:hover {
+                        background: $bg-1;
+                    }
+                }
+                img {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+    position: absolute;
+    right: calc(100% + 15px);
+    border: none;
+    background-color: transparent;
+    color: $bg-1;
+    font-size: 30px;
+    top: 5px;
+}
+
+@media only screen and (max-width: 1600px) {
+    .payHamburger {
+        ul {
+            li {
+                a {
+                    &.payDeposit {
+                        padding: 0.8rem 2.625rem;
+                    }
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .hdrTopRight {
+        ul {
+            li {
+                a {
+                    height: 3rem;
+                    width: 3rem;
+                    line-height: 3rem;
+                    display: block;
+                    img {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+                .usd {
+                    height: 3rem;
+                }
+            }
+        }
+    }
+    // .mainHeader {
+    //     .logo {
+    //         width: 184px;
+    //     }
+    // }
+}
+
+@media only screen and (max-width: 1024px) {
+    .navigation {
+        ul {
+            li {
+                &:not(:last-child) {
+                    margin-right: 1.25rem;
+                }
+                a {
+                    font-size: 1rem;
+                    svg.homeIcon {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    // .navOpen {
+    //     background: #f00;
+    // }
+}
+
+@media only screen and (max-width: 767px) {
+    .mainHeader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        .headerRightTop {
+            background-color: transparent;
+            margin-right: 5.5rem;
+            .mobBetween {
+                justify-content: flex-end !important;
+            }
+        }
+        .logo {
+            width: 8.625rem;
+        }
+    }
+
+    .headerRightBottom {
+        padding: 0;
+    }
+    .hamburger {
+        display: block;
+    }
+    .navigation {
+        position: fixed;
+        height: 100%;
+        z-index: 4;
+        background: $bg-white;
+        top: 0;
+        width: 18.75rem;
+        transition: all ease-in-out 0.4s;
+        left: 100%;
+        &.navOpen {
+            transform: translateX(-100%);
+        }
+        > ul {
+            display: block !important;
+            li {
+                &:not(:last-child) {
+                    margin: 0 0 0.313rem;
+                }
+                a {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+
+    .overlay {
+        position: fixed;
+        height: 100%;
+        z-index: 3;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        width: 100%;
+        transition: all ease-in-out 0.4s;
+        left: 100%;
+        &.overlayOpen {
+            transform: translateX(-100%);
+        }
+    }
+    .payHamburger {
+        display: none !important;
+    }
+    .hdrTopLeft {
+        display: none !important;
+    }
+}

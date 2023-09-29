@@ -1,0 +1,21 @@
+@media only screen and (max-width: 1600px) {
+    html {
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    html {
+        font-size: 0.688rem;
+    }
+}
+@media only screen and (max-width: 1184px) {
+    body {
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 767px) {
+    body {
+        margin-top: 5.3rem;
+    }
+}

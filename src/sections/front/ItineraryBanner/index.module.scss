@@ -1,0 +1,133 @@
+@import "../../../assets/front/styles/variable";
+// @import "../../../assets/front/styles/mixin";
+.itineraryBanner {
+    min-height: 49.875rem;
+    background-size: cover !important;
+    position: relative;
+    z-index: 1;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: -1;
+    }
+}
+.ibBanBtm {
+    position: absolute;
+    left: 0;
+    bottom: 4rem;
+    width: 100%;
+    color: $bg-white;
+}
+.ibBanLeft {
+    flex: 0 0 auto;
+    max-width: 100%;
+    padding: 0 1.25rem;
+    h6 {
+        margin-bottom: 0.938rem;
+        span {
+            border-radius: 50px;
+            background: $bg-1;
+            padding: 0.438rem 1rem;
+            color: $bg-white;
+            font-size: 1.125rem;
+            display: inline-block;
+        }
+    }
+    h5 {
+        margin-bottom: 1rem;
+        span {
+            border-radius: 50px;
+            background: $light-green;
+            padding: 0.75rem 1.25rem;
+            color: $bg-3;
+            font-size: 1.375rem;
+            display: inline-block;
+            font-weight: 500;
+        }
+    }
+    h3 {
+        color: $bg-white;
+        font-size: 2.75rem;
+    }
+}
+.ibBanRight {
+    flex: 0 0 auto;
+    max-width: 100%;
+    padding: 0 1.25rem;
+}
+
+.ibStar {
+    ul {
+        margin-right: 1rem;
+        li {
+            img {
+                width: 1.5rem;
+                height: auto;
+                display: block;
+            }
+        }
+    }
+}
+.galPrev {
+    margin-bottom: 2.25rem;
+    ul {
+        li {
+            &:not(:last-child) {
+                margin-right: 1.875rem;
+            }
+            a {
+                display: block;
+                padding: 0.625rem 1.25rem;
+                font-size: 1.125rem;
+                font-weight: 500;
+                border-radius: 5px;
+                svg {
+                    font-size: 2rem;
+                    transition: all ease-in-out 0.4s;
+                }
+                &.viewGalleryBtn {
+                    background: $bg-8;
+                    color: $bg-white;
+                    &:hover {
+                        background: $bg-1;
+                    }
+                }
+                &.videoPreview {
+                    background: $bg-white;
+                    color: $bg-3;
+                    svg {
+                        color: $bg-8;
+                    }
+                    &:hover {
+                        background: $bg-3;
+                        color: $bg-white;
+                        svg {
+                            color: $bg-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.freeCancellation {
+    p {
+        text-align: right;
+        color: $bg-3;
+        font-weight: 500;
+        font-size: 1.125rem;
+        border-radius: 50px;
+        background: $light-green;
+        padding: 0.313rem 0.625rem;
+        svg {
+            font-size: 1.375rem;
+            margin-right: 1.25rem;
+        }
+    }
+}

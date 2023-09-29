@@ -1,0 +1,259 @@
+@import "../../../../assets/front/styles/variable";
+.footer {
+    background: #160220;
+}
+.footerLogo {
+    padding: 3rem 1rem;
+    border-right: #350050 1px solid;
+    p {
+        color: $bg-white;
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.7;
+    }
+    img {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+.footerSocial {
+    margin-top: 3rem;
+    p {
+        color: $bg-3;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        background: #ecf4fc;
+        padding: 6px 20px;
+        display: inline-block;
+        margin-bottom: 0.8rem;
+    }
+    ul {
+        li {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+            a {
+                display: block;
+                width: 3rem;
+                line-height: 3rem;
+                background: $bg-white;
+                text-align: center;
+                border-radius: 5px;
+                font-size: 1.375rem;
+                color: $bg-3;
+                &:hover {
+                    background: $bg-1;
+                    color: $bg-white;
+                }
+            }
+        }
+    }
+}
+
+.footerNavLinks {
+    h6 {
+        color: $bg-white;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            margin: 0.625rem 0;
+            flex: 0 0 100%;
+            max-width: 100%;
+            a {
+                color: $bg-6;
+                font-weight: 500;
+                display: inline-block;
+                &:hover {
+                    color: $bg-white;
+                }
+            }
+        }
+    }
+    .devideMenu {
+        li {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+    &.navContact {
+        ul {
+            li {
+                color: $bg-6;
+                position: relative;
+                padding-left: 30px;
+
+                svg {
+                    position: absolute;
+                    left: 0;
+                    top: 5px;
+                }
+            }
+        }
+    }
+}
+.subscriptionArea {
+    margin-top: 3rem;
+}
+.subscriptionLeft {
+    flex: 0 0 30rem;
+    max-width: 30rem;
+    margin: 0.5rem 0;
+    .subscriptionInput {
+        flex: 1 0 0%;
+        background: $bg-white;
+        border: none;
+        border-radius: 5px 0px 0px 5px;
+        height: 4.125rem;
+        color: $bg-3;
+        padding: 0 1.125rem;
+    }
+    .subscribeBtn {
+        border-radius: 0px 5px 5px 0px;
+        background: $bg-1;
+        color: $bg-white;
+        font-weight: 600;
+        height: 4.125rem;
+        padding: 0 1.875rem;
+        border: none;
+    }
+}
+.subscriptionRight {
+    margin: 0.5rem 0;
+    p {
+        color: $bg-3;
+        font-size: 1.313rem;
+        font-weight: 400;
+        border-radius: 50px;
+        background: $bg-white;
+        padding: 0.625rem 1.875rem;
+    }
+}
+.newsletterText {
+    margin-top: 5px;
+    p {
+        color: $bg-white;
+        font-size: 0.875rem;
+        font-weight: 500;
+        a {
+            color: $bg-1;
+            display: inline-block;
+        }
+    }
+}
+
+.bottomFooter {
+    padding: 2rem 0;
+    border-top: #350050 1px solid;
+    h6 {
+        color: $bg-7;
+        font-size: 1.25rem;
+        margin-bottom: 0.1rem;
+    }
+    p {
+        color: $bg-7;
+        font-weight: 500;
+    }
+}
+.rightIcon {
+    .sectigo {
+        margin-right: 5.625rem;
+        img {
+            width: 14.75rem;
+            height: auto;
+        }
+    }
+    ul {
+        li {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.WriteUs {
+    padding: 5rem 0 3rem;
+    h3 {
+        color: $bg-white;
+        font-size: 1.25rem;
+        span {
+            display: inline-block;
+            &.handIcon {
+                margin-right: 2.75rem;
+            }
+            &.arrowIcon {
+                margin-left: 2.75rem;
+            }
+            img {
+                display: inline-block;
+                width: 4.313rem;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .subscriptionLeft {
+        .subscriptionInput {
+            height: 3.125rem;
+        }
+        .subscribeBtn {
+            height: 3.125rem;
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    .subscriptionArea {
+        margin: 0.5rem 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .rightIcon {
+        .sectigo {
+            margin-right: 2.625rem;
+            img {
+                width: auto;
+                height: 2.875rem;
+            }
+        }
+        ul {
+            li {
+                img {
+                    height: 1.875rem;
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .WriteUs {
+        padding: 0 0 1rem;
+        h3 {
+            font-size: 0.875rem;
+            span {
+                display: inline-block;
+                &.handIcon {
+                    margin-right: 1rem;
+                }
+                &.arrowIcon {
+                    margin-left: 1rem;
+                }
+                img {
+                    width: 1.313rem;
+                }
+            }
+        }
+    }
+    .copyRight {
+        margin-bottom: 1rem;
+    }
+}

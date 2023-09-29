@@ -1,0 +1,69 @@
+@import "../../../assets/front/styles/variable";
+.information {
+    background: linear-gradient(180deg, rgba(236, 244, 252, 0.8) 0%, #ecf4fc 50%, rgba(236, 244, 252, 0.8) 100%);
+}
+.infoBox {
+    height: 100%;
+    text-align: center;
+    padding: 6rem 0.625rem 3.375rem;
+    position: relative;
+    > span {
+        display: block;
+        margin-bottom: 1.875rem;
+        img {
+            width: 6rem;
+            height: auto;
+        }
+    }
+    h5 {
+        font-size: 1.5rem;
+        position: relative;
+        display: inline-block;
+        span {
+            position: absolute;
+            right: -1.625rem;
+            top: -0.625rem;
+            img {
+                width: 1.5rem;
+                height: auto;
+            }
+        }
+    }
+    h6 {
+        color: #425466;
+        font-size: 1.25rem;
+    }
+    p {
+        border-radius: 3.125rem;
+        background: $bg-9;
+        color: $bg-10;
+        font-size: 0.875rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+        img {
+            width: 0.813rem;
+            height: auto;
+            margin-right: 5px;
+            display: inline-block;
+        }
+    }
+}
+
+.information {
+    [class*="col-"] {
+        &:not(:last-child) {
+            .infoBox {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 1px;
+                    height: 100%;
+                    background: #c8daec;
+                }
+            }
+        }
+    }
+}
